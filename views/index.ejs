@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>接口信息</title>
+    <link rel="stylesheet" href="/libs/public/bootstrap.min.css?"/>
+    <link rel="stylesheet" href="/libs/public/font-awesome.css"/>
+    <link rel="stylesheet" href="/libs/dataTables/dataTables.bootstrap.css"/>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body class="gray-bg">
+<h1>接口信息</h1>
+<table class="table table-striped table-bordered table-hover " id="myTable">
+    <thead>
+    <tr>
+        <th>方法</th>
+        <th>接口分类</th>
+        <th>接口链接</th>
+        <th>接口名称</th>
+        <th>接口参数</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>POST</td>
+        <td>用户接口</td>
+        <td><a href="/user/userRegister">/user/userRegister</a></td>
+        <td>用户注册</td>
+        <td>
+            userTel:手机号码<br>
+            userPassWord:登录密码<br>
+            userPayPass:支付密码<br>
+            userSecret:
+        </td>
+    </tr>
+     <tr>
+        <td>POST</td>
+        <td>登录接口</td>
+        <td><a href="/users/userSignin">/users/userSignin</a></td>
+        <td>用户登录</td>
+        <td>
+            userTel:手机号码<br>
+            userPassWord:登录密码<br>
+        </td>
+    </tr>
+     <tr>
+        <td>GET</td>
+        <td>问问</td>
+        <td><a href="http://localhost:3000/users/hostList?hostListpageing=1&hostListpageSize=10">/users/lostList?hostListypageing=1&hostListpageSize=10</a></td>
+        <td>旅游列表</td>
+        <td>
+            hostListpageing:页数<br>
+            hostListpageSize:每一页的条数<br>
+        </td>
+    </tr>
+    <tr>
+        <td>POST</td>
+        <td>列表删除</td>
+        <td><a href="http://localhost:3000/users/removeList">/users/removeList</a></td>
+        <td>列表删除接口</td>
+        <td>
+            hostListpageing:页数<br>
+            hostListpageSize:每一页的条数<br>
+        </td>
+    </tr>
+    <tr>
+        <td>POST</td>
+        <td>修改密码</td>
+        <td><a href="http://localhost:3000/users/forgetpassword">/users/forgetpassword</a></td>
+        <td>修改密码接口</td>
+        <td>
+            password:新密码<br>
+            username:用户名<br>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<script src="/libs/public/jquery.min.js"></script>
+<script src="/libs/public/bootstrap.min.js"></script>
+<script src="/libs/dataTables/jquery.dataTables.js"></script>
+<script src="/libs/dataTables/dataTables.bootstrap.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#myTable').DataTable();
+    });
+</script>
+</body>
+</html>
